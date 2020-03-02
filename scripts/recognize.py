@@ -18,6 +18,7 @@ class Recognizer():
         try:
             print("Google Speech Recognition 認為你說:")
             ans = self.r.recognize_google(self.audio, language="zh-TW")
+            print(ans)
             return ans
 
         except speech_recognition.UnknownValueError:

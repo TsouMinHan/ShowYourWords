@@ -3,6 +3,8 @@ from scripts.recognize import Recognizer
 
 class SpeakThread(QThread):
     append_text_signal = pyqtSignal(str)
+    statusbar_text_signal = pyqtSignal(str)
+
     def __init__(self,):
         QThread.__init__(self)
         self.cnt = 0    
@@ -12,12 +14,11 @@ class SpeakThread(QThread):
     def end(self):
         self.flag = False
 
-    def emit_append_text_signal(self, msg):
-        self.append_text_signal.emit(msg)
-
     def run(self,):
         self.flag = True
+        self.statusbar_text_signal.emit('開始偵測')
         while self.flag:
             self.rec.recognize()
 
-            self.emit_append_text_signal(self.rec.get_txt())
+            self.append_text_signal.emit(self.rec.get_txt())
+        self.statusbar_text_signal.emit('結束偵測')

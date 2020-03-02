@@ -16,6 +16,7 @@ class Controller:
 
     def init(self,):
         self.speak_thread.append_text_signal.connect(self._view.append_text_to_browser)
+        self.speak_thread.statusbar_text_signal.connect(self._view.set_statusbar_text)
 
         self._view.comboBox.currentTextChanged.connect(self._view.comboBox_changed)
         self._view.startButton.clicked.connect(self.start_speak_thread)  
@@ -25,6 +26,7 @@ class Controller:
         self.speak_thread.start()
 
     def end_speak_thread(self):
+        self._view.statusBar().showMessage('關閉麥克風中...')
         self.speak_thread.end()
 
     def run(self,):

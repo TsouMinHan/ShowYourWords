@@ -16,3 +16,6 @@ class View(QMainWindow, Ui_MainWindow):
         font_size = int(self.comboBox.currentText())
         self.font.setPointSize(font_size)
         self.textBrowser.setFont(self.font)
+    
+    def set_statusbar_text(self, msg):
+        self.statusbar.showMessage(msg)
