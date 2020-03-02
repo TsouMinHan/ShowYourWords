@@ -26,7 +26,7 @@ class Controller:
         self.speak_thread.start()
 
     def end_speak_thread(self):
-        self._view.statusBar().showMessage('關閉麥克風中...')
+        self._view.statusBar().showMessage('關閉麥克風中...(若尚未關閉則是還在偵測中，請隨意說些話結束程式偵測')
         self.speak_thread.end()
 
     def run(self,):
