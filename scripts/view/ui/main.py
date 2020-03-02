@@ -31,9 +31,9 @@ class Ui_MainWindow(object):
         ls = [str(i) for i in range(10, 50, 2)]    # 設定字的大小
         self.comboBox.addItems(ls)
 
-        self.staartButton = QtWidgets.QPushButton(self.centralwidget)
-        self.staartButton.setGeometry(QtCore.QRect(20, 530, 93, 28))
-        self.staartButton.setObjectName("staartButton")
+        self.startButton = QtWidgets.QPushButton(self.centralwidget)
+        self.startButton.setGeometry(QtCore.QRect(20, 530, 93, 28))
+        self.startButton.setObjectName("startButton")
 
         self.endButton = QtWidgets.QPushButton(self.centralwidget)
         self.endButton.setGeometry(QtCore.QRect(130, 530, 93, 28))
@@ -55,7 +55,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.staartButton.setText(_translate("MainWindow", "開始"))
+        self.startButton.setText(_translate("MainWindow", "開始"))
         self.endButton.setText(_translate("MainWindow", "結束"))
 
 if __name__ == "__main__":
