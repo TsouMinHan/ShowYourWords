@@ -1,3 +1,7 @@
+2020.03.12
+add language drowbox
+bug fixed
+
 2020.03.02
 專案開始
 create MVS structure

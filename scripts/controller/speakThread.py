@@ -14,11 +14,11 @@ class SpeakThread(QThread):
     def end(self):
         self.flag = False
 
-    def run(self,):
+    def run(self):
         self.flag = True
         self.statusbar_text_signal.emit('開始偵測')
         while self.flag:
             self.rec.recognize()
 
-            self.append_text_signal.emit(self.rec.get_txt())
+            self.append_text_signal.emit(self.rec.get_txt(self.BCP))
         self.statusbar_text_signal.emit('結束偵測')

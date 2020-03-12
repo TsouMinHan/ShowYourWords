@@ -1,4 +1,5 @@
 from PyQt5 import QtWidgets
+import json
 import sys
 
 from scripts.view import View
@@ -23,6 +24,10 @@ class Controller:
         self._view.endButton.clicked.connect(self.end_speak_thread)  
 
     def start_speak_thread(self,):
+        with open ('languages.json', 'r', encoding='utf8') as f:
+            language_dc = json.load(f)
+
+        self.speak_thread.BCP = language_dc[self._view.comboBox_2.currentText()]      
         self.speak_thread.start()
 
     def end_speak_thread(self):

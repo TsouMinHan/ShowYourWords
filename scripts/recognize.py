@@ -1,6 +1,3 @@
-from gtts import gTTS
-from pygame import mixer
-import tempfile
 import speech_recognition
 
 class Recognizer():
@@ -14,10 +11,10 @@ class Recognizer():
             print("說些什麼吧!")
             self.audio = self.r.listen(source)
 
-    def get_txt(self,):
+    def get_txt(self, BCP):
         try:
             print("Google Speech Recognition 認為你說:")
-            ans = self.r.recognize_google(self.audio, language="zh-TW")
+            ans = self.r.recognize_google(self.audio, language=BCP)
             print(ans)
             return ans
 
