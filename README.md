@@ -3,7 +3,7 @@ For the hearing impaired. Show what you are talking about. only for chinese.
 
 Translate spoken words to text via Google API.
 
-Now just for Chinese.
+Now just for Chinese, Japanese and English.
 
-I thought about adding more translate language in this programe, but it was not necessary for me.
+You can get `BCP-47` code in [Google API language support](https://cloud.google.com/speech-to-text/docs/languages) and add it in `languages.json`.
 
