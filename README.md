@@ -1,5 +1,5 @@
 # ShowYourWords
-For the hearing impaired. Show what you are talking about. only for chinese.
+For the hearing impaired. Show what you are talking about.
 
 Translate spoken words to text via Google API.
 
