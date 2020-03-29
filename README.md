@@ -12,3 +12,5 @@ The programe still has some features that can be improved.
 When the API translating, programe can't track what are you saying.
 
 I think queue or threading can fix up this issue, but i'm a lazy guy.
+
+![](./img/1.JPG)
